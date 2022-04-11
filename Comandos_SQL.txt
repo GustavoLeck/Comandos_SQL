@@ -1,0 +1,159 @@
+{
+    //Todo texto escrita em letra minuscula são comentarios   
+    //Ou explicando o comando, ou especificando o valor a ser inserido
+    //Gustavo Leck # 28/11/2021
+}
+
+SELECT 
+
+SELECT 'campo or * for all' FROM 'tabela' WHERE 'campo' = 'condição'; 
+
+COM LIKE 
+
+SELECT 'campo or * for all' FROM 'tabela' WHERE 'campo' LIKE '%'parte da string'%' 
+
+COM ORDER BY  
+
+SELECT 'campo or * for all' FROM 'tabela' ORDER BY 'campo com valor pra ordenar' 
+
+COM ORDER BY decrescente  
+
+SELECT 'campo or * for all' FROM 'tabela' ORDER BY 'campo com valor pra ordenar' desc 
+
+COM SELEÇÃO DOS PRIMEIROS X RESULTADOS  
+
+SELECT FIRST X 'campo or * for all' FROM 'tabela' ORDER BY 'campo com valor pra ordenar' DESC 
+
+COM BETWEEN 
+
+SELECT FIRST X 'campo or * for all' FROM 'tabela' WHERE 'campo' BETWEEN 'x' AND 'y' ORDER BY 'campo com valor pra ordenar' DESC 
+
+  
+
+UPDATE  
+
+UPDATE 'tabela' 
+
+    set 'campo' = 'dados' 
+
+   WHERE 'campo' = 'condição'; 
+
+  
+
+DELETE 
+
+DELETE 'campo or * for all' FROM 'tabela' WHERE 'campo' = 'condição'; 
+
+  
+
+  
+
+ADICIONAR CAMPO 
+
+ALTER TABLE 'tabela' ADD 'campo' 'tipo de dado' ''se é notnull'; 
+
+  
+
+CRIAR CHAVE ESTRANGEIRA  
+
+ALTER TABLE 'tabela'  
+
+ADD CONSTRAINT 'campo' FOREIGN KEY ('campo da tabela que deve ser chave estrangeira') 
+
+REFERENCE 'tabela''campo da tabela que deve ser a chave estrangeira' 
+
+  
+
+INSERT 
+
+INSERT INTO 'tabela' ('campo', 'campo', 'campo') 
+
+VALUES ('valor', 'valor', ''valor); -- em ordem 
+
+  
+
+CRIAR GENERATOR  
+
+CREATE GENERATOR 'nome do generator'; 
+
+SET GENERATOR 'nome do generator' TO 'x - numero do código' 
+
+  
+
+CRIAR TRIGGER  
+
+SET TERM ^; 
+
+
+
+CREATE TRIGGER 'nome da trigger' FOR 'tabela alavo' 
+
+ACTIVE BEFORE INSERT POSITION 0 --Quando vai ser ativado, neste caso é antes de um insert 
+
+AS 
+
+BEGIN 
+
+NEW 'campo alvo' =GEN_ID('nome do generator a ser utilizado', 'x -numero de incremento por vez'); -- Código que deve ser rodado antes da condição da linha acima 
+
+END^ 
+
+SET TERM;^ 
+
+  
+
+CRIAR EXCEPTION  
+
+CREATE EXCPTION 'nome da exceção' ''mensagem da exception'';  -- para ser usada deve estar dentro de uma trigger 
+
+JOIN  
+
+SELECT * FROM NF 
+
+JOIN CLIFOR WHERE CLIFOR.CODIGO = ND.ID --Trara todos os registros de ambas as tabelas que bate a condição 
+
+  
+
+LEFT JOIN 
+
+SELECT * FROM NF 
+
+LEFT JOIN CLIFOR WHERE CLIFOR.CODIGO = ND.ID -- Trará todos os registros da PRIMEIRA tabela citada + os registros que batem com a condição da segunda tabela 
+
+  
+
+RIGHT JOIN 
+
+SELECT * FROM NF 
+
+LEFT JOIN CLIFOR WHERE CLIFOR.CODIGO = ND.ID -- Trará todos os registros da SEGUNDA tabela citada + os registros que batem com a condição da segunda tabela  
+
+  
+
+INNER JOIN  
+
+SELECT * FROM NF 
+
+INNER JOIN CLIFOR WHERE CLIFOR.CODIGO = ND.ID --Trara todos os registros de ambas as tabelas que bate a condição 
+
+  
+
+ALIAS(Apelido) 
+
+SELECT X.id 
+
+FROM NF X -- Deve ser colocado o ápelido depois do nome da tabela, alias definido nesta linha 
+
+WHERE EMISSAO between '07.12.2020' AND '07.12.2021' 
+
+  
+
+UNION  
+
+SELECT * FROM X 
+
+UNION --Comando para unir as duas tabelas selecionadas no select  
+
+SELECT * FROM Y 
+
+--UNION geralmente é usado com tabelas parecidas, quando se quer montar uma tabela com campos em comum, por exemplo clifor e funcionario  
