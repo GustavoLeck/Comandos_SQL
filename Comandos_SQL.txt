@@ -4,7 +4,9 @@
     //Gustavo Leck # 28/11/2021
 }
 
-SELECT 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//SELECT 
 
 SELECT 'campo or * for all' FROM 'tabela' WHERE 'campo' = 'condição'; 
 
@@ -29,8 +31,9 @@ COM BETWEEN
 SELECT FIRST X 'campo or * for all' FROM 'tabela' WHERE 'campo' BETWEEN 'x' AND 'y' ORDER BY 'campo com valor pra ordenar' DESC 
 
   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-UPDATE  
+//UPDATE  
 
 UPDATE 'tabela' 
 
@@ -38,23 +41,24 @@ UPDATE 'tabela'
 
    WHERE 'campo' = 'condição'; 
 
-  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-DELETE 
+//DELETE 
 
 DELETE 'campo or * for all' FROM 'tabela' WHERE 'campo' = 'condição'; 
 
   
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
 
-ADICIONAR CAMPO 
+//ADICIONAR CAMPO NA TABELA
 
 ALTER TABLE 'tabela' ADD 'campo' 'tipo de dado' ''se é notnull'; 
 
-  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CRIAR CHAVE ESTRANGEIRA  
+
+//CRIAR CHAVE ESTRANGEIRA  
 
 ALTER TABLE 'tabela'  
 
@@ -62,29 +66,28 @@ ADD CONSTRAINT 'campo' FOREIGN KEY ('campo da tabela que deve ser chave estrange
 
 REFERENCE 'tabela''campo da tabela que deve ser a chave estrangeira' 
 
-  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-INSERT 
+//INSERT 
 
 INSERT INTO 'tabela' ('campo', 'campo', 'campo') 
 
 VALUES ('valor', 'valor', ''valor); -- em ordem 
 
-  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CRIAR GENERATOR  
+//CRIAR GENERATOR  
 
 CREATE GENERATOR 'nome do generator'; 
 
 SET GENERATOR 'nome do generator' TO 'x - numero do código' 
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
 
-CRIAR TRIGGER  
+//CRIAR TRIGGER  
 
 SET TERM ^; 
-
-
 
 CREATE TRIGGER 'nome da trigger' FOR 'tabela alavo' 
 
@@ -101,8 +104,9 @@ END^
 SET TERM;^ 
 
   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CRIAR EXCEPTION  
+//CRIAR EXCEPTION  
 
 CREATE EXCPTION 'nome da exceção' ''mensagem da exception'';  -- para ser usada deve estar dentro de uma trigger 
 
@@ -113,32 +117,34 @@ SELECT * FROM NF
 JOIN CLIFOR WHERE CLIFOR.CODIGO = ND.ID --Trara todos os registros de ambas as tabelas que bate a condição 
 
   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-LEFT JOIN 
+//LEFT JOIN 
 
 SELECT * FROM NF 
 
 LEFT JOIN CLIFOR WHERE CLIFOR.CODIGO = ND.ID -- Trará todos os registros da PRIMEIRA tabela citada + os registros que batem com a condição da segunda tabela 
 
   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-RIGHT JOIN 
+//RIGHT JOIN 
 
 SELECT * FROM NF 
 
 LEFT JOIN CLIFOR WHERE CLIFOR.CODIGO = ND.ID -- Trará todos os registros da SEGUNDA tabela citada + os registros que batem com a condição da segunda tabela  
 
-  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-INNER JOIN  
+//INNER JOIN  
 
 SELECT * FROM NF 
 
 INNER JOIN CLIFOR WHERE CLIFOR.CODIGO = ND.ID --Trara todos os registros de ambas as tabelas que bate a condição 
 
-  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-ALIAS(Apelido) 
+//ALIAS(Apelido) 
 
 SELECT X.id 
 
@@ -146,9 +152,9 @@ FROM NF X -- Deve ser colocado o ápelido depois do nome da tabela, alias defini
 
 WHERE EMISSAO between '07.12.2020' AND '07.12.2021' 
 
-  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-UNION  
+//UNION  
 
 SELECT * FROM X 
 
